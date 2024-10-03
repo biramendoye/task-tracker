@@ -27,7 +27,7 @@ cd task-tracker
 ### Build the Project
 
 ```bash
-go build -o task-cli main.go
+go build -o task-cli cmd/main.go
 ```
 
 ## Usage

@@ -1,4 +1,4 @@
-package main
+package task
 
 import "testing"
 
@@ -16,7 +16,7 @@ func TestInsertTask(t *testing.T) {
 
 	for _, test := range tests {
 		t.Run(test.name, func(t *testing.T) {
-			taskList.insertTask(test.task)
+			taskList.InsertTask(test.task)
 			if len(taskList.Tasks) != test.expected {
 				t.Errorf("Expected task list length %d, got %d", test.expected, len(taskList.Tasks))
 			}
@@ -26,8 +26,8 @@ func TestInsertTask(t *testing.T) {
 
 func TestDeleteTask(t *testing.T) {
 	taskList := NewTaskList()
-	taskList.insertTask(NewTask(1, "Task 1"))
-	taskList.insertTask(NewTask(2, "Task 2"))
+	taskList.InsertTask(NewTask(1, "Task 1"))
+	taskList.InsertTask(NewTask(2, "Task 2"))
 
 	tests := []struct {
 		name      string
@@ -41,7 +41,7 @@ func TestDeleteTask(t *testing.T) {
 
 	for _, test := range tests {
 		t.Run(test.name, func(t *testing.T) {
-			result := taskList.deleteTask(test.taskID)
+			result := taskList.DeleteTask(test.taskID)
 			if result != test.expected {
 				t.Errorf("Expected %v, got %v", test.expected, result)
 			}
@@ -54,7 +54,7 @@ func TestDeleteTask(t *testing.T) {
 
 func TestUpdateTask(t *testing.T) {
 	taskList := NewTaskList()
-	taskList.insertTask(NewTask(1, "Task 1"))
+	taskList.InsertTask(NewTask(1, "Task 1"))
 
 	tests := []struct {
 		name         string
@@ -72,7 +72,7 @@ func TestUpdateTask(t *testing.T) {
 
 	for _, test := range tests {
 		t.Run(test.name, func(t *testing.T) {
-			result := taskList.updateTask(test.taskID, test.description, test.status)
+			result := taskList.UpdateTask(test.taskID, test.description, test.status)
 			if result != test.expectedRes {
 				t.Errorf("Expected %v, got %v", test.expectedRes, result)
 			}

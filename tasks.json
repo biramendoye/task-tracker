@@ -1,25 +1,3 @@
 {
- "tasks": [
-  {
-   "id": 1,
-   "description": "Buy groceries",
-   "status": "done",
-   "created_at": "2024-10-03T17:05:24.34146874Z",
-   "updated_at": "2024-10-03T17:05:53.425158641Z"
-  },
-  {
-   "id": 2,
-   "description": "create a repo",
-   "status": "todo",
-   "created_at": "2024-10-03T17:06:17.276632968Z",
-   "updated_at": "2024-10-03T17:06:17.276633095Z"
-  },
-  {
-   "id": 3,
-   "description": "install golang",
-   "status": "in-progress",
-   "created_at": "2024-10-03T17:06:33.615698203Z",
-   "updated_at": "2024-10-03T17:08:06.04699421Z"
-  }
- ]
+ "tasks": []
 }
